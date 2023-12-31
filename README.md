@@ -1,4 +1,4 @@
-# openpack-meta-data
+# OpenPack Dataset
 
 ["OpenPack Dataset"](https://open-pack.github.io/) is a new large-scale multi modal dataset of manual packing process.
 This repository host meta data of OpenPack dataset.
