@@ -1,7 +1,12 @@
 # OpenPack Dataset
 
-"[OpenPack Dataset](https://open-pack.github.io/)" is a new large-scale multi-modal dataset of packing processes.
+[OpenPack Dataset](https://open-pack.github.io/) is a new large-scale multi-modal dataset of packing processes.
 This repository provides download instruction and technical details for the OpenPack Dataset.
+
+## Contents
+
+- [What is OpenPack dataset?](#what-is-openpack-dataset)
+- [Download](#download)
 
 ## What is OpenPack dataset?
 
@@ -28,6 +33,36 @@ In addition, we collected data from IoT devices which are sparse but have strong
 
 OpenPack also provides a rich set of metadata such as subject’s experience in packaging work and physical traits of subjects, enabling designs of various research tasks such as assessment of worker’s performance in addition to basic work activity recognition.
 In addition, we made a list of irregular activities which can be used for developing normal detection technologies.
+
+## Data Repository
+
+OpenPack dataset is available in 3 repository.
+Different repositories provide different sets of data with different licenses.
+Please refer to the table below to select the repository best fit for your requirements.
+Instructions for downloading each dataset are provided in the next section.
+
+| -                       | GitHub (openpack-dataset) | Zenodo          | Google Drive    | Google Drive (RGB)              |
+| ----------------------- | ------------------------- | --------------- | --------------- | ------------------------------- |
+| **Modality (Wearable)** |                           |                 |                 |                                 |
+| Acceleration            | x                         | o               | o               | x                               |
+| Gyroscope               | x                         | o               | o               | x                               |
+| Orientation             | x                         | o               | o               | x                               |
+| EDA                     | x                         | o               | o               | x                               |
+| BVP                     | x                         | o               | o               | x                               |
+| Temperature             | x                         | o               | o               | x                               |
+|                         |                           |                 |                 |                                 |
+| **Modality (Vision)**   |                           |                 |                 |                                 |
+| Keypoints               | x                         | o               | o               | x                               |
+| Depth (PNG)             | x                         | x               | o               | x                               |
+| Depth (LiDAR)           | x                         | x               | o               | x                               |
+| RGB Images              | x                         | x               | x               | o                               |
+|                         |                           |                 |                 |                                 |
+| **Modality (Others)**   |                           |                 |                 |                                 |
+| IoT Device              | x                         | o               | o               | x                               |
+| Meta Data               | x                         | o               | o               | x                               |
+| Annotation              | x                         | o               | o               | x                               |
+|                         |                           |                 |                 |                                 |
+| **License**             | CC BY-NC-SA 4.0           | CC BY-NC-SA 4.0 | CC BY-NC-SA 4.0 | OpenPack Dataset (+RGB) License |
 
 ## Download
 
