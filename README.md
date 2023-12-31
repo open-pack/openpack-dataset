@@ -70,13 +70,10 @@ Please follow the instructions below for downloading **OpenPack datasets (v1.0.0
 
 ### Zenodo
 
-Data except images is available in [zenodo](https://zenodo.org/records/8145223).
-Go to the following page and download the files one by one.
+Data except images is available in [zenodo (DOI: 10.5281/zenodo.8145223)](https://zenodo.org/records/8145223).
+Go to this page and download the files one by one.
 
-- Zenodo: [OpenPack: Public multi-modal dataset for packaging work recognition in logistics domain (DOI: 10.5281/zenodo.8145223)](https://zenodo.org/records/8145223)
-
-Alternatively, you can use this command to download and extract the all files at the same time.
-(Ref: [Download Shell Script](./release/v1.0.0/download_from_zenodo.sh))
+Alternatively, you can use [this command](./release/v1.0.0/download_from_zenodo.sh) to download and extract the all files at the same time.
 
 ```bash
 bash ./release/v1.0.0/download_from_zenodo.sh <PATH TO YOUR DATASET ROOT DIRECTORY>
@@ -100,10 +97,8 @@ For some subjects, RGB images can also be available.
 However, RGB images are distributed under [OpenPack Dataset (+RGB) License](./licenses/OPENPACK_DATASET_RGB_LICENSE.md).
 The usage of this dataset is limited to the academic research ONLY, any direct or indirect commercial use is NOT allowed.
 
-You must first apply through Google Form below and we will confirm your qualification.
+You must first apply through ["OpenPack Dataset - Access Request Form"](https://docs.google.com/forms/d/e/1FAIpQLScrRWe-qTQV5CKTBxtLQZ7ScgLsHFWxXRmD5he04qXRVBAtqg/viewform?usp=sf_link) and we will confirm your qualification.
 Once approved, we will share the data with Read Only access to your google account.
-
-- [OpenPack Dataset - Access Request Form](https://docs.google.com/forms/d/e/1FAIpQLScrRWe-qTQV5CKTBxtLQZ7ScgLsHFWxXRmD5he04qXRVBAtqg/viewform?usp=sf_link)
 
 ## License
 
