@@ -34,6 +34,12 @@ In addition, we collected data from IoT devices which are sparse but have strong
 OpenPack also provides a rich set of metadata such as subject’s experience in packaging work and physical traits of subjects, enabling designs of various research tasks such as assessment of worker’s performance in addition to basic work activity recognition.
 In addition, we made a list of irregular activities which can be used for developing normal detection technologies.
 
+## Dataset Document
+
+Detail infomrmation of this dataset is available under [docs/](./docs)
+
+- [OpenPack Dataset - Data Sheet](./docs/README.md)
+
 ## Download OpenPack Dataset (v1.0.0)
 
 ### Data Repository
