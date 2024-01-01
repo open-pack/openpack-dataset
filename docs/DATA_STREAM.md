@@ -1,8 +1,8 @@
-# Modality
+# Sensor Modalities (List of Data Streams)
 
 ## Table of Contents
 
-- [Modality](#modality)
+- [Sensor Modalities (List of Data Streams)](#sensor-modalities-list-of-data-streams)
   - [Table of Contents](#table-of-contents)
   - [\[1\] `atr-qags`](#1-atr-qags)
     - [1-1: Metadata](#1-1-metadata)
