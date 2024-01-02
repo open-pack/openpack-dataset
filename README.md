@@ -5,8 +5,20 @@ This repository provides download instruction and technical details for the Open
 
 ## Contents
 
-- [What is OpenPack dataset?](#what-is-openpack-dataset)
-- [Download](#download-openpack-dataset-v100)
+- [OpenPack Dataset](#openpack-dataset)
+  - [Contents](#contents)
+  - [What is OpenPack dataset?](#what-is-openpack-dataset)
+    - [Large Scale activity dataset in Industrial Domain](#large-scale-activity-dataset-in-industrial-domain)
+    - [Rich Modalities - Vision + Wearable + IoT Device](#rich-modalities---vision--wearable--iot-device)
+    - [Rich Meta Data](#rich-meta-data)
+  - [Documentation](#documentation)
+  - [Download OpenPack Dataset (v1.0.0)](#download-openpack-dataset-v100)
+    - [Data Repository](#data-repository)
+    - [Download from Zenodo](#download-from-zenodo)
+    - [Donwload from Google Drive](#donwload-from-google-drive)
+    - [Download from Google Drive (RGB)](#download-from-google-drive-rgb)
+  - [Tools](#tools)
+  - [License](#license)
 
 ## What is OpenPack dataset?
 
@@ -34,11 +46,20 @@ In addition, we collected data from IoT devices which are sparse but have strong
 OpenPack also provides a rich set of metadata such as subject’s experience in packaging work and physical traits of subjects, enabling designs of various research tasks such as assessment of worker’s performance in addition to basic work activity recognition.
 In addition, we made a list of irregular activities which can be used for developing normal detection technologies.
 
-## Dataset Document
+## Documentation
 
 Detail infomrmation of this dataset is available under [docs/](./docs)
 
-- [OpenPack Dataset - Data Sheet](./docs/README.md)
+- [OpenPack Dataset - Documentation](./docs/README.md)
+  - [Reocrding Sessions](./docs/SESSIONS.md)
+  - Data
+    - [Sensor Modality (Data Stream)](./docs/DATA_STREAM.md)
+    - [Subjects-related Metadata](./docs/SUBJECTS.md)
+    - [System Metadata](./docs/METADATA.md)
+  - Annotation
+    - [Activity Class Definition](./docs/ANNOTATION.md)
+  - Benchmark
+    - [Data Split](./docs/DATA_SPLIT.md)
 
 ## Download OpenPack Dataset (v1.0.0)
 

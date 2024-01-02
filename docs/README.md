@@ -3,9 +3,11 @@
 ## Table of Contents
 
 - [Reocrding Sessions](./SESSIONS.md)
-- [Sensor Modality (Data Stream)](./DATA_STREAM.md)
-- [Annotations (Activity Class Definition)](./ANNOTATION.md)
-- Metadata
+- Data
+  - [Sensor Modality (Data Stream)](./DATA_STREAM.md)
   - [Subjects-related Metadata](./SUBJECTS.md)
   - [System Metadata](./METADATA.md)
-- [Data Split](./DATA_SPLIT.md)
+- Annotation
+  - [Activity Class Definition](./ANNOTATION.md)
+- Benchmark
+  - [Data Split](./DATA_SPLIT.md)
