@@ -1,0 +1,27 @@
+name: Sync OpenPack Documentation
+
+on:
+  push:
+    branches:
+      - "main"
+      - "feat/getty708/**"
+jobs:
+  move-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: olivr/copybara-action@v1.2.3
+        with:
+          access_token: ${{ secrets.GH_TOKEN }}
+          ssh_key: ${{ secrets.SSH_KEY }}
+          sot_repo: ssh://git@github.com:open-pack/openpack-dataset.git
+          destination_repo: ssh://git@github.com:open-pack/openpack-toolkit.git
+
+          push_include: "docs/**/*.md"
+          push_exclude: ""
+
+          pr_move: |
+            ||docs/openpack-dataset
