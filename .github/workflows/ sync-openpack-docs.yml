@@ -18,7 +18,9 @@ jobs:
           access_token: ${{ secrets.GH_TOKEN }}
           ssh_key: ${{ secrets.SSH_KEY }}
           sot_repo: open-pack/openpack-dataset
+          sot_branch: feat/getty708/copybra-integration
           destination_repo: open-pack/openpack-toolkit
+          destination_branch: main
 
           push_include: "docs/**/*.md"
           push_exclude: ""
