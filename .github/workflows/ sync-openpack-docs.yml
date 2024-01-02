@@ -17,8 +17,8 @@ jobs:
         with:
           access_token: ${{ secrets.GH_TOKEN }}
           ssh_key: ${{ secrets.SSH_KEY }}
-          sot_repo: ssh://git@github.com/open-pack/openpack-dataset.git
-          destination_repo: ssh://git@github.com/open-pack/openpack-toolkit.git
+          sot_repo: open-pack/openpack-dataset
+          destination_repo: open-pack/openpack-toolkit
 
           push_include: "docs/**/*.md"
           push_exclude: ""
