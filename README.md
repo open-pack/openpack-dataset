@@ -104,6 +104,26 @@ The usage of this dataset is limited to the academic research ONLY, any direct o
 You must first apply through ["OpenPack Dataset - Access Request Form"](https://docs.google.com/forms/d/e/1FAIpQLScrRWe-qTQV5CKTBxtLQZ7ScgLsHFWxXRmD5he04qXRVBAtqg/viewform?usp=sf_link) and we will confirm your qualification.
 Once approved, we will share the data with Read Only access to your google account.
 
+## Tools
+
+OpenPack offers a variety of tools, including data loading tools and a benchmark pipeline implementation.
+Below are links to the available tools.
+
+- [OpenPack Dataset - Official Web](https://open-pack.github.io/)
+  - Visual information about the OpenPack dataset.
+  - Results of OpenPack Challenge 2022 (@PerCom 2023 WS BiRD)
+- [OpenPack Dataset Toolkit (GitHub: openpack-toolkit)](https://github.com/open-pack/openpack-toolkit)
+  - Utility to load and transoform the OpenPack dataset.
+  - It provides functions and snippets for combining sensor data with different sampling rates and ground truth in Python.
+  - A sample notebook to visualize dataset is available.
+- [OpenPack Dataset PyTorch Utilities (GitHub: openpack-torch)](https://github.com/open-pack/openpack-torch)
+  - PyTorch utilities to work around with OpenPack Dataset.
+  - It provides implementations of baseline models sich as U-Net, DeepConvLSTM.
+  - A pipeline for benchmarking (model training and testing) is implemented with [PyTorch Lightning](https://github.com/Lightning-AI/pytorch-lightning).
+  - Tutorial notebooks for U-Net and DeepConvLSTM are available.
+- [YouTube: OpenPack Dataset](https://youtube.com/@openpackdataset6864?si=2VemMXqnXexe_f-4)
+  - Samples of depth recordings and tutorial session for OpenPack Challenge 2022 are available.
+
 ## License
 
 [OpenPack Dataset](https://doi.org/10.5281/zenodo.5909086) itself is available under [Creative Commons Attribution Non Commercial Share Alike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license.
