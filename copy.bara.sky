@@ -1,0 +1,26 @@
+openpackDatasetUrl = "git@github.com:open-pack/openpack-dataset.git"
+openpackToolkitUrl = "git@github.com:open-pack/openpack-toolkit.git"
+
+core.workflow(
+    name = "default",
+    origin = git.origin(
+        url = openpackDatasetUrl,
+        ref = "main",
+    ),
+    destination = git.github_pr_destination(
+        url = openpackToolkitUrl,
+        destination_ref = "main",
+        pr_branch = "from-openpack-dataset",
+        title = "[Sync] Update the dataset docs",
+        body = "Docs in openpack-dataset is updated. This PR copy the changes to this repo.",
+        integrates = [],
+    ),
+    origin_files = glob(["docs/**"]),
+    destination_files = glob(["docs/openpack-dataset/**"]),
+    authoring = authoring.pass_thru("Copybara <yoshimura708x@gmail.com>"),
+
+    # Change the path here to the folder you want to publish publicly
+    transformations = [
+	    core.move("docs/", "docs/openpack-dataset/"),
+	],
+)
