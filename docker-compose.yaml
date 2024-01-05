@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   copybara:
-    image: getty708/copybara:20230105-5e3d88c
+    image: getty708/copybara:20230105-5e3d88cf
     tty: true
     environment:
       OPYBARA_SUBCOMMAND: migrate
