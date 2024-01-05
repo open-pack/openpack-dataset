@@ -27,7 +27,7 @@ jobs:
           echo "GIT_CREDENTIALS_PATH=~/.git-credentials" >> .env
           echo "SSH_CONFIG_PATH=~/.ssh/config" >> .env
           echo "SSH_KEY_PATH=~/.ssh/id_git" >> .env
-          ehoc "SSH_KNOWN_HOSTS_PATH=~/.ssh/known_hosts" >> .env
+          echo "SSH_KNOWN_HOSTS_PATH=~/.ssh/known_hosts" >> .env
         shell: bash
 
       - run: |
