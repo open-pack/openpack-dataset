@@ -21,6 +21,15 @@ jobs:
           echo $'${{ secrets.GIT_CREDENTIALS }}' > ~/.git-credentials
         shell: bash
 
+      # Create .env file
+      - run: |
+          echo "GIT_CONFIG_PATH=~/.gitconfig" >> .env
+          echo "GIT_CREDENTIALS_PATH=~/.git-credentials" >> .env
+          echo "SSH_CONFIG_PATH=~/.ssh/config" >> .env
+          echo "SSH_KEY_PATH=~/.ssh/id_git" >> .env
+          ehoc "SSH_KNOWN_HOSTS_PATH=~/.ssh/known_hosts" >> .env
+        shell: bash
+
       - run: |
           git config --global user.name ${{ secrets.GIT_NAME }}
           git config --global user.email ${{ secrets.GIT_EMAIL }}
