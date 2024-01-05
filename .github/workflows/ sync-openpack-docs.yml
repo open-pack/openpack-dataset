@@ -15,9 +15,13 @@ jobs:
       
       - run: |
           mkdir ~/.ssh
-          echo $'${{ secrets.SSH_KEY }}' > ~/.ssh/id_git
-          echo $'${{ secrets.SSH_KNOWN_HOSTS }}' > ~/.ssh/known_hosts
+          chmod 700 ~/.ssh
           echo $'${{ secrets.SSH_CONFIG }}' > ~/.ssh/config
+          chmod 600 ~/.ssh/config
+          echo $'${{ secrets.SSH_KEY }}' > ~/.ssh/id_git
+          chmod 600 ~/.ssh/id_git
+          echo $'${{ secrets.SSH_KNOWN_HOSTS }}' > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
           echo $'${{ secrets.GIT_CREDENTIALS }}' > ~/.git-credentials
         shell: bash
 
