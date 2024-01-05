@@ -1,5 +1,5 @@
-openpackDatasetUrl = "git@github.com:open-pack/openpack-dataset.git"
-openpackToolkitUrl = "git@github.com:open-pack/openpack-toolkit.git"
+openpackDatasetUrl = "ssh://git@github.com/open-pack/openpack-dataset.git"
+openpackToolkitUrl = "ssh://git@github.com/open-pack/openpack-toolkit.git"
 
 core.workflow(
     name = "default",
@@ -10,8 +10,8 @@ core.workflow(
     destination = git.github_pr_destination(
         url = openpackToolkitUrl,
         destination_ref = "main",
-        pr_branch = "from-openpack-dataset",
-        title = "[Sync] Update the dataset docs",
+        pr_branch = "from-openpack-dataset-dev5",
+        title = "[Sync] Update the dataset docs (Test5)",
         body = "Docs in openpack-dataset is updated. This PR copy the changes to this repo.",
         integrates = [],
     ),

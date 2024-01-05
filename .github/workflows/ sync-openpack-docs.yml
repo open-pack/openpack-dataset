@@ -12,19 +12,23 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      
+      - run: |
+          mkdir ~/.ssh
+          echo $'${{ secrets.SSH_KEY }}' > ~/.ssh/id_git
+          echo $'${{ secrets.SSH_KNOWN_HOSTS }}' > ~/.ssh/known_hosts
+          echo $'${{ secrets.SSH_CONFIG }}' > ~/.ssh/config
+          echo $'${{ secrets.GIT_CREDENTIALS }}' > ~/.git-credentials
+        shell: bash
 
-      - uses: olivr/copybara-action@v1.2.3
-        with:
-          access_token: ${{ secrets.GH_TOKEN }}
-          ssh_key: ${{ secrets.SSH_KEY }}
-          ssh_known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-          sot_repo: open-pack/openpack-dataset
-          sot_branch: feat/getty708/copybra-integration
-          destination_repo: open-pack/openpack-toolkit
-          destination_branch: main
+      - run: |
+          git config --global user.name ${{ secrets.GIT_NAME }}
+          git config --global user.email ${{ secrets.GIT_EMAIL }}
+        shell: bash
 
-          push_include: "docs/**/*.md"
-          push_exclude: ""
+      - run: docker pull getty708/copybara:20230105-5e3d88cf
+        shell: bash
 
-          pr_move: |
-            ||docs/openpack-dataset
+      - run: docker compose up
+        shell: bash
+  
