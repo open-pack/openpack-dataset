@@ -29,18 +29,10 @@ jobs:
           echo "$GIT_CREDENTIALS" > ~/.git-credentials
         shell: bash
 
-      - name: for debug
-        run: |
-          chown root:root ~/.ssh/config
-          ls -la ~
-          ls -la ~/.ssh
-          ls -la ./
-        shell: bash
-
       - run: docker pull getty708/copybara:20240104-5e3d88cf-gha
         shell: bash
 
-      - name: run copybara
+      - name: Run copybara
         env:
           GIT_CONFIG_PATH: ~/.gitconfig
           GIT_CREDENTIALS_PATH: ~/.git-credentials
