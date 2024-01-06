@@ -39,6 +39,11 @@ jobs:
           git config --global user.email ${{ secrets.GIT_EMAIL }}
         shell: bash
 
+      - run: |
+          ls -la ~
+          ls -la ~/.ssh
+        shell: bash
+
       - run: docker pull getty708/copybara:20230105-5e3d88cf
         shell: bash
 
