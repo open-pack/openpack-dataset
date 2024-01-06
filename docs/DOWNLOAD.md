@@ -4,7 +4,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Data Repositories](#data-repositories)
-- [How to download OpenPack dataset?](#how-to-download-openpack-dataset)
+- [How to download the latest OpenPack dataset?](#how-to-download-the-latest-openpack-dataset)
   - [Download from Zenodo](#download-from-zenodo)
   - [Donwload from Google Drive](#donwload-from-google-drive)
   - [Download from Google Drive (RGB)](#download-from-google-drive-rgb)
@@ -39,7 +39,9 @@ Instructions for downloading each dataset come after this table.
 |                         |                           |                 |                 |                                 |
 | **License**             | CC BY-NC-SA 4.0           | CC BY-NC-SA 4.0 | CC BY-NC-SA 4.0 | OpenPack Dataset (+RGB) License |
 
-## How to download OpenPack dataset?
+## How to download the latest OpenPack dataset?
+
+Here we explain how to download the latest OpenPack dataset (v1.0.0).
 
 ### Download from Zenodo
 
@@ -49,10 +51,16 @@ Go to this page and download the files one by one.
 Alternatively, you can use [this shell script](https://github.com/open-pack/openpack-dataset/blob/main/release/v1.0.0/download_from_zenodo.sh) to download and extract the all files at the same time.
 
 ```bash
-bash ./release/v1.0.0/download_from_zenodo.sh <PATH TO YOUR DATASET ROOT DIRECTORY>
+#!/bin/bash
+# Get a download script.
+$ curl -o download_from_zenodo.sh https://raw.githubusercontent.com/open-pack/openpack-dataset/main/release/v1.0.0/download_from_zenodo.sh
 
-# Example:
-bash ./release/v1.0.0/download_from_zenodo.sh ../data/datasets
+# Create dataset root directory. (Please change this path if necessary)
+$ export DATASET_ROOTDIR_PATH=./data/datasets
+$ mkdir -p $DATASET_ROOTDIR_PATH
+
+# Download the dataset. (It takes time to complete. Please wait with patience...)
+$ bash download_from_zenodo.sh $DATASET_ROOTDIR_PATH
 ```
 
 The data on the zenodo is distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license.
