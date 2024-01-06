@@ -12,33 +12,38 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      
-      - name: Setup SSH
-        env:
-          SSH_CONFIG: ${{ secrets.SSH_CONFIG }}
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
-          GIT_CREDENTIALS: ${{ secrets.GIT_CREDENTIALS }}
-        run: |
-          mkdir ~/.ssh
-          echo "$SSH_CONFIG" > ~/.ssh/config
-          echo "$SSH_KEY" > ~/.ssh/id_git
-          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-          echo "$GIT_CREDENTIALS" > ~/.git-credentials
-        shell: bash
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_git # optional
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          config: |
+            Host github github.com
+              HostName github.com
+              IdentityFile ~/.ssh/id_git
+              User git
 
       # Create .env file
-      - run: |
-          echo "GIT_CONFIG_PATH=~/.gitconfig" >> .env
-          echo "GIT_CREDENTIALS_PATH=~/.git-credentials" >> .env
-          echo "SSH_CONFIG_PATH=~/.ssh/config" >> .env
-          echo "SSH_KEY_PATH=~/.ssh/id_git" >> .env
-          echo "SSH_KNOWN_HOSTS_PATH=~/.ssh/known_hosts" >> .env
+      - name: Add .env
+        env:
+          DOTENV_CONTENT: |
+            GIT_CONFIG_PATH=~/.gitconfig
+            GIT_CREDENTIALS_PATH=~/.git-credentials
+            SSH_CONFIG_PATH=~/.ssh/config
+            SSH_KEY_PATH=~/.ssh/id_git
+            SH_KNOWN_HOSTS_PATH=~/.ssh/known_hosts
+        run: echo "$DOTENV_CONTENT" > .env
         shell: bash
 
-      - run: |
+      - name: Setup git
+        env:
+          GIT_CREDENTIALS: ${{ secrets.GIT_CREDENTIALS }}
+        run: |
           git config --global user.name ${{ secrets.GIT_NAME }}
           git config --global user.email ${{ secrets.GIT_EMAIL }}
+          echo "$GIT_CREDENTIALS" > ~/.git-credentials
         shell: bash
 
       - name: for debug
@@ -48,6 +53,7 @@ jobs:
           ls -la ./
           cat ~/.ssh/config
           cat ~/.ssh/known_hosts
+          cat .env
         shell: bash
 
       - run: docker pull getty708/copybara:20230105-5e3d88cf
