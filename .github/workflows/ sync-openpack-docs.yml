@@ -18,7 +18,7 @@ jobs:
         with:
           key: ${{ secrets.SSH_KEY }}
           name: id_git # optional
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
           config: |
             Host github github.com
               HostName github.com
