@@ -48,11 +48,10 @@ jobs:
 
       - name: for debug
         run: |
+          chown root:root ~/.ssh/config
           ls -la ~
           ls -la ~/.ssh
           ls -la ./
-          cat ~/.ssh/config
-          cat ~/.ssh/known_hosts
           cat .env
         shell: bash
 
