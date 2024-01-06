@@ -38,6 +38,7 @@ Detail infomrmation of this dataset is available under [docs/](./docs) folder.
     - [Activity Class Definition](./docs/ANNOTATION.md)
   - Benchmark
     - [Data Split](./docs/DATA_SPLIT.md)
+  - [How to download the OpenPack dataset?](./docs/DOWNLOAD.md)
 
 ## Download
 
