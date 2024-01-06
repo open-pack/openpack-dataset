@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - "main"
-      - "feat/getty708/**"
 jobs:
   move-code:
     runs-on: ubuntu-latest
