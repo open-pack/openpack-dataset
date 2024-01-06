@@ -41,10 +41,16 @@ Go to this page and download the files one by one.
 Alternatively, you can use [this command](./release/v1.0.0/download_from_zenodo.sh) to download and extract the all files at the same time.
 
 ```bash
-bash ./download_from_zenodo.sh <PATH TO YOUR DATASET ROOT DIRECTORY>
+#!/bin/bash
+# Get a download script.
+$ curl -o download_from_zenodo.sh https://raw.githubusercontent.com/open-pack/openpack-dataset/main/release/v1.0.0/download_from_zenodo.sh
 
-# Example:
-bash ./download_from_zenodo.sh ../../../data/datasets
+# Create dataset root directory. (Please change this path if necessary)
+$ export DATASET_ROOTDIR_PATH=./data/datasets
+$ mkdir -p $DATASET_ROOTDIR_PATH
+
+# Download the dataset. (It takes time to complete. Please wait with patience...)
+$ bash download_from_zenodo.sh $DATASET_ROOTDIR_PATH
 ```
 
 The data on the zenodo is distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license.
