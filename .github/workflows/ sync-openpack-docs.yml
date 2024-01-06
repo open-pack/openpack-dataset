@@ -13,16 +13,18 @@ jobs:
         with:
           fetch-depth: 0
       
-      - run: |
+      - name: Setup SSH
+        env:
+          SSH_CONFIG: ${{ secrets.SSH_CONFIG }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+          GIT_CREDENTIALS: ${{ secrets.GIT_CREDENTIALS }}
+        run: |
           mkdir ~/.ssh
-          chmod 700 ~/.ssh
-          echo $'${{ secrets.SSH_CONFIG }}' > ~/.ssh/config
-          chmod 600 ~/.ssh/config
-          echo $'${{ secrets.SSH_KEY }}' > ~/.ssh/id_git
-          chmod 600 ~/.ssh/id_git
-          echo $'${{ secrets.SSH_KNOWN_HOSTS }}' > ~/.ssh/known_hosts
-          chmod 600 ~/.ssh/known_hosts
-          echo $'${{ secrets.GIT_CREDENTIALS }}' > ~/.git-credentials
+          echo "$SSH_CONFIG" > ~/.ssh/config
+          echo "$SSH_KEY" > ~/.ssh/id_git
+          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          echo "$GIT_CREDENTIALS" > ~/.git-credentials
         shell: bash
 
       # Create .env file
@@ -39,9 +41,13 @@ jobs:
           git config --global user.email ${{ secrets.GIT_EMAIL }}
         shell: bash
 
-      - run: |
+      - name: for debug
+        run: |
           ls -la ~
           ls -la ~/.ssh
+          ls -la ./
+          cat ~/.ssh/config
+          cat ~/.ssh/known_hosts
         shell: bash
 
       - run: docker pull getty708/copybara:20230105-5e3d88cf
