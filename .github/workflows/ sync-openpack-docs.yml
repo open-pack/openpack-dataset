@@ -5,7 +5,7 @@ on:
     branches:
       - "main"
 jobs:
-  move-code:
+  copybara:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,9 +28,10 @@ jobs:
           echo "$GIT_CREDENTIALS" > ~/.git-credentials
         shell: bash
 
-      - run: docker pull getty708/copybara:20240104-5e3d88cf-gha
+      - name: Pull a docker image
+        run: docker pull getty708/copybara:20240104-5e3d88cf-gha
         shell: bash
 
-      - name: Run copybara
+      - name: Run CopyBara
         run: docker compose up
         shell: bash
