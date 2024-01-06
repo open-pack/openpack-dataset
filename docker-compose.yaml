@@ -2,7 +2,7 @@ version: "3.5"
 services:
   copybara:
     platform: linux/amd64
-    image: getty708/copybara:20230105-5e3d88cf
+    image: getty708/copybara:20240104-5e3d88cf-gha
     tty: true
     environment:
       OPYBARA_SUBCOMMAND: migrate
@@ -14,8 +14,6 @@ services:
       - ./:/usr/src/app
       - ${GIT_CONFIG_PATH}:/root/.gitconfig:ro
       - ${GIT_CREDENTIALS_PATH}:/root/.git-credentials:ro
-      - ~/.ssh:/root/.ssh
-      # - ${SSH_CONFIG_PATH}:/root/.ssh/config
-      # - ${SSH_KEY_PATH}:/root/.ssh/id_git
-      # - ${SSH_KNOWN_HOSTS_PATH}:/root/.ssh/known_hosts
+      - ${SSH_KEY_PATH}:/root/.ssh/id_git
+      - ${SSH_KNOWN_HOSTS_PATH}:/root/.ssh/known_hosts
 

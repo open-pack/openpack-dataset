@@ -17,25 +17,8 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_KEY }}
-          name: id_git # optional
+          name: id_git
           known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-          config: |
-            Host github github.com
-              HostName github.com
-              IdentityFile ~/.ssh/id_git
-              User git
-
-      # Create .env file
-      - name: Add .env
-        env:
-          DOTENV_CONTENT: |
-            GIT_CONFIG_PATH=~/.gitconfig
-            GIT_CREDENTIALS_PATH=~/.git-credentials
-            SSH_CONFIG_PATH=~/.ssh/config
-            SSH_KEY_PATH=~/.ssh/id_git
-            SH_KNOWN_HOSTS_PATH=~/.ssh/known_hosts
-        run: echo "$DOTENV_CONTENT" > .env
-        shell: bash
 
       - name: Setup git
         env:
@@ -52,12 +35,17 @@ jobs:
           ls -la ~
           ls -la ~/.ssh
           ls -la ./
-          cat .env
         shell: bash
 
-      - run: docker pull getty708/copybara:20230105-5e3d88cf
+      - run: docker pull getty708/copybara:20240104-5e3d88cf-gha
         shell: bash
 
-      - run: docker compose up
+      - name: run copybara
+        env:
+          GIT_CONFIG_PATH: ~/.gitconfig
+          GIT_CREDENTIALS_PATH: ~/.git-credentials
+          SSH_KEY_PATH: ~/.ssh/id_git
+          SH_KNOWN_HOSTS_PATH: ~/.ssh/known_hosts
+        run: docker compose up
         shell: bash
   
