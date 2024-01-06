@@ -37,7 +37,7 @@ jobs:
           GIT_CONFIG_PATH: ~/.gitconfig
           GIT_CREDENTIALS_PATH: ~/.git-credentials
           SSH_KEY_PATH: ~/.ssh/id_git
-          SH_KNOWN_HOSTS_PATH: ~/.ssh/known_hosts
+          SSH_KNOWN_HOSTS_PATH: ~/.ssh/known_hosts
         run: docker compose up
         shell: bash
   
