@@ -3,16 +3,19 @@ openpackToolkitUrl = "ssh://git@github.com/open-pack/openpack-toolkit.git"
 
 core.workflow(
     name = "default",
+    mode="ITERATIVE",
     origin = git.origin(
         url = openpackDatasetUrl,
         ref = "main",
+        first_parent=False,
+        describe_version=True,
     ),
     destination = git.github_pr_destination(
         url = openpackToolkitUrl,
         destination_ref = "main",
-        pr_branch = "from-openpack-dataset-dev5",
-        title = "[Sync] Update the dataset docs (Test5)",
-        body = "Docs in openpack-dataset is updated. This PR copy the changes to this repo.",
+        pr_branch = "feat/copybara/from-openpack-dataset",
+        title="[feat][CopyBara] Changes from opnepack-dataset (${CONTEXT_REFERENCE})",
+        update_description=True,
         integrates = [],
     ),
     origin_files = glob(["docs/**"]),
