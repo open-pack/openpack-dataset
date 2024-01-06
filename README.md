@@ -8,8 +8,8 @@ This repository provides download instruction and technical details for the Open
 - [Contents](#contents)
 - [What is OpenPack dataset?](#what-is-openpack-dataset)
 - [Documentation](#documentation)
-  - [Download](#download)
-- [Tools](#tools)
+- [Download](#download)
+- [Tools \& Ecosystem](#tools--ecosystem)
 - [Contact](#contact)
 - [Acknowledgement](#acknowledgement)
 - [License](#license)
@@ -39,7 +39,7 @@ Detail infomrmation of this dataset is available under [docs/](./docs) folder.
   - Benchmark
     - [Data Split](./docs/DATA_SPLIT.md)
 
-### Download
+## Download
 
 OpenPack datasets are available in 3 repositories.
 Please refer to [DOWNLOAD.md](./docs/DOWNLOAD.md) for the differences between each repository and how to download.
@@ -61,8 +61,7 @@ $ mkdir -p $DATASET_ROOTDIR_PATH
 $ bash download_from_zenodo.sh $DATASET_ROOTDIR_PATH
 ```
 
-
-## Tools
+## Tools & Ecosystem
 
 OpenPack offers a variety of tools, including data loading tools and a benchmark pipeline implementation.
 Below are links to the available tools.
@@ -84,7 +83,7 @@ Below are links to the available tools.
 
 ## Contact
 
-If you have any question about OpenPack dataset, please post them to [Issues](https://github.com/open-pack/openpack-dataset/issues) and assign them to Naoya Yoshimura ( @getty708 ) or Jaime Morales ( @MorJaime ).
+If you have any question about OpenPack dataset, please post them to [Issues](https://github.com/open-pack/openpack-dataset/issues) and assign them to Naoya Yoshimura ([@getty708](https://github.com/getty708)) or Jaime Morales ([@MorJaime](https://github.com/MorJaime)).
 We will be happy to help you.
 
 ## Acknowledgement
