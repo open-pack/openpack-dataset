@@ -1,0 +1,29 @@
+openpackDatasetUrl = "ssh://git@github.com/open-pack/openpack-dataset.git"
+openpackToolkitUrl = "ssh://git@github.com/open-pack/openpack-toolkit.git"
+
+core.workflow(
+    name = "default",
+    mode="ITERATIVE",
+    origin = git.origin(
+        url = openpackDatasetUrl,
+        ref = "main",
+        first_parent=False,
+        describe_version=True,
+    ),
+    destination = git.github_pr_destination(
+        url = openpackToolkitUrl,
+        destination_ref = "main",
+        pr_branch = "feat/copybara/from-openpack-dataset",
+        title="[feat][CopyBara] Changes from opnepack-dataset (${CONTEXT_REFERENCE})",
+        update_description=True,
+        integrates = [],
+    ),
+    origin_files = glob(["docs/**"]),
+    destination_files = glob(["docs/openpack-dataset/**"]),
+    authoring = authoring.pass_thru("Copybara <yoshimura708x@gmail.com>"),
+
+    # Change the path here to the folder you want to publish publicly
+    transformations = [
+	    core.move("docs/", "docs/openpack-dataset/"),
+	],
+)

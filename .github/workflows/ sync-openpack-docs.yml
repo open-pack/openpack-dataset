@@ -1,0 +1,37 @@
+name: Sync OpenPack Documentation
+
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  copybara:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_git
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
+      - name: Setup git
+        env:
+          GIT_CREDENTIALS: ${{ secrets.GIT_CREDENTIALS }}
+        run: |
+          git config --global user.name ${{ secrets.GIT_NAME }}
+          git config --global user.email ${{ secrets.GIT_EMAIL }}
+          echo "$GIT_CREDENTIALS" > ~/.git-credentials
+        shell: bash
+
+      - name: Pull a docker image
+        run: docker pull getty708/copybara:20240104-5e3d88cf-gha
+        shell: bash
+
+      - name: Run CopyBara
+        run: docker compose up
+        shell: bash

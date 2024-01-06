@@ -1,0 +1,19 @@
+version: "3.5"
+services:
+  copybara:
+    platform: linux/amd64
+    image: getty708/copybara:20240104-5e3d88cf-gha
+    tty: true
+    environment:
+      OPYBARA_SUBCOMMAND: migrate
+      COPYBARA_CONFIG: copy.bara.sky
+      COPYBARA_WORKFLOW: default
+      COPYBARA_SOURCEREF: ""
+      COPYBARA_OPTIONS: "--force"
+    volumes:
+      - ./:/usr/src/app
+      - ${GIT_CONFIG_PATH:-~/.gitconfig}:/root/.gitconfig:ro
+      - ${GIT_CREDENTIALS_PATH:-~/.git-credentials}:/root/.git-credentials:ro
+      - ${SSH_KEY_PATH:-~/.ssh/id_git}:/root/.ssh/id_git
+      - ${SSH_KNOWN_HOSTS_PATH:-~/.ssh/known_hosts}:/root/.ssh/known_hosts
+
