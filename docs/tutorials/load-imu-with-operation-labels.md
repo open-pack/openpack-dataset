@@ -1,7 +1,7 @@
 # Load IMU Sensor Data with Operation Labels
 
-The data is saved in separate files for each sensor, because the sampling rate differs for each sensor.
-Each record has timestamp information and we can combine the multiple data stream using the timestamps.
+The data is saved in separate files for each sensor because the sampling rate differs for each sensor.
+Each record has timestamp information and we can combine the multiple data streams using the timestamps.
 
 This tutorial explains how to combine two types of data. As an example, we will merge the IMU data (`atr01`) with the work operation's labels.
 Once you know how to combine sensor data with ground truth, you can prepare data for model training.
@@ -12,7 +12,7 @@ Once you know how to combine sensor data with ground truth, you can prepare data
 - [Sample Script](#sample-script)
 - [Step-by-Step Explanation](#step-by-step-explanation)
   - [Step.1 Load IMU Data](#step1-load-imu-data)
-  - [Step.2 Load Annotation (Work Operaton Label)](#step2-load-annotation-work-operaton-label)
+  - [Step.2 Load Annotation (Work Operation Label)](#step2-load-annotation-work-operation-label)
   - [Step.3 Combine Operation Labels with IMU DataFrame](#step3-combine-operation-labels-with-imu-dataframe)
 
 ## Sample Script
@@ -34,8 +34,8 @@ Requirements:
 
 ### Step.1 Load IMU Data
 
-IMU data from `atr/atr01` (Acc + Gyro at right wrist) is saved as CSV file.
-Here is a sample implementation to load the data. Pandas is used to read CSV file.
+IMU data from `atr/atr01` (Acc + Gyro at the right wrist) is saved as a CSV file.
+Here is a sample implementation to load the data. Pandas is used to read the CSV file.
 
 ```python
 def load_imu_sensor_data(openpack_rootdir: Path) -> pd.DataFrame:
@@ -63,11 +63,11 @@ Sensor Data (IMU; atr/atr01) from ./data/datasets/openpack/v1.0.0/U0101/atr/atr0
 
 NOTE: Quaterninon for U0101 is not available. The missing values are filled with `0`.
 
-### Step.2 Load Annotation (Work Operaton Label)
+### Step.2 Load Annotation (Work Operation Label)
 
 Next, let's load the annotation data, which is also saved as CSV.
-Unlike other sensor data, timestamp in annotation data is ISO format (`str`), not unixtimestamp (`int`).
-So, added an operation to convert ISO timestamps into unixtimestamp and save them in columns of `unixtime_start` and `unixtime_end`.
+Unlike other sensor data, the timestamp in annotation data is the ISO format (`str`), not a UNIX timestamp (`int`).
+So, added an operation to convert ISO timestamps into UNIX timestamps and save them in columns of `unixtime_start` and `unixtime_end`.
 
 ```python
 def to_millisecond_timestamp(timestamp_iso: str) -> int:
@@ -106,10 +106,10 @@ Annotation Data (Operation Label) from ../../../../data/datasets/openpack/v1.0.0
 
 ### Step.3 Combine Operation Labels with IMU DataFrame
 
-Combines the annotation label with the IMU data using unixtimestamp.
+Combines the annotation label with the IMU data using UNIX timestamps.
 First, create a new column `operation` in `df_imu` to store operation labels.
-The default value should be the ID for Null class (`8100`, Ref: [ANNOTATION.md](../ANNOTATION.md)).
-Extract records which obtained between the `unixtime_start` and `unixtime_end` of a label, and update the operation ids of the records.
+The default value should be the ID for the Null class (`8100`, Ref: [ANNOTATION.md](../ANNOTATION.md)).
+Extract records obtained between the `unixtime_start` and `unixtime_end` of a label, and update the operation IDs of the records.
 
 ```python
 NULL_CLASS_ID = 8100
