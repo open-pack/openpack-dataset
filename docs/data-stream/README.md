@@ -4,7 +4,7 @@
 
 - [Wearables](./wearables.md)
 
-## Data Stream Ovweview
+## Data Stream Overview
 
 ### Wearables
 
