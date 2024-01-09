@@ -3,8 +3,11 @@
 ## Sensor Configuration and File Format
 
 - [Wearables](./wearables.md)
+- [Vision](./vision.md)
+- [IoT](./iot.md)
+- [Metadata](./metadata.md)
 
-## Data Stream Overview
+## Data Streams
 
 ### Wearables
 
