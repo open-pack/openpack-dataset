@@ -1,21 +1,17 @@
-# Annotations
-
-## Table of Contents
-
-- [Annotations](#annotations)
-  - [Table of Contents](#table-of-contents)
-  - [Activity Class Definitions](#activity-class-definitions)
-    - [\[1\] Work Operations (`OPENPACK_OPERATIONS`)](#1-work-operations-openpack_operations)
-    - [\[2\] Actions (`OPENPACK_ACTIONS`)](#2-actions-openpack_actions)
-    - [\[3\] Outlier Events (`OPENPACK_OUTLIERS`)](#3-outlier-events-openpack_outliers)
-
-## Activity Class Definitions
+# Activity Class Definitions
 
 Data was annotated by three expert annotators by reference to the RGB images.
 Definition of activity class was made with the help of industrial engineers.
 In the latest version, three types of annotations are available: (1) work operations, (2) action, and (3) outliers.
 
-### [1] Work Operations (`OPENPACK_OPERATIONS`)
+## 1. Table of Contents
+
+- [1. Table of Contents](#1-table-of-contents)
+- [2. Work Operations (`OPENPACK_OPERATIONS`)](#2-work-operations-openpack_operations)
+- [3. Actions (`OPENPACK_ACTIONS`)](#3-actions-openpack_actions)
+- [4. Outlier Events (`OPENPACK_OUTLIERS`)](#4-outlier-events-openpack_outliers)
+
+## 2. Work Operations (`OPENPACK_OPERATIONS`)
 
 Operation clases are defined based on an instruction document used in an actual logistics center.
 The document specifies a sequence of work operation performbed by workers.
@@ -39,7 +35,7 @@ Ten operations written in the document are annotated. Here are definitions of th
 In the `opnepack-toolkit`, this operation class set is implemented as `openpack_toolkit.OPENPACK_OPERATIONS`.
 Also, a list of work operations are available in the YAML format. See [openpack-toolkit:configs/dataset/annotation/openpack-operations.yaml](https://github.com/open-pack/openpack-toolkit/blob/main/configs/dataset/annotation/openpack-operations.yaml)
 
-### [2] Actions (`OPENPACK_ACTIONS`)
+## 3. Actions (`OPENPACK_ACTIONS`)
 
 In an instruction document, each operation are explained in details.
 For example, a description of the “relocate item label” operation is given as “Remove the label from the items and place it on the bottom margin of the packaging list. Check the product name and quantity on the list and label with a ballpoint pen.”
@@ -96,7 +92,7 @@ Therefore, to enable research to recognize hierarchical activity classes, we ann
 In the `opnepack-toolkit`, this action class set is implemented as `openpack_toolkit.configs.dataset.annotation.OPENPACK_ACTIONS`.
 Also, a list of action labels are available in the YAML format. See [openpack-toolkit:configs/dataset/annotation/openpack-actions.yaml](https://github.com/open-pack/openpack-toolkit/blob/main/configs/dataset/annotation/openpack-operations.yaml)
 
-### [3] Outlier Events (`OPENPACK_OUTLIERS`)
+## 4. Outlier Events (`OPENPACK_OUTLIERS`)
 
 In principle, a worker repetitively performs a sequence of predefined operations, but mistakes and other unexpected actions occur.
 Because these outliers can decrease product quality and productivity, managers of industrial sites want to detect such harmful activities.
