@@ -42,6 +42,8 @@ Technical information on this dataset is available under [docs](./docs/) folder.
   - [Benchmark](./docs/benchmark/)
     - [Data Split](./docs/benchmark/data-split.md)
   - [How to download the OpenPack dataset?](./docs/DOWNLOAD.md)
+  - [Tutorial](./docs/tutorials/)
+    - [Load IMU Sensor Data with Operation Labels](./docs/tutorials/load-imu-with-operation-labels.md)
 
 ## Download
 
