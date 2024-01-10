@@ -14,3 +14,4 @@
   - [Activity Class Definition](./annotation/activity-class.md)
 - [Benchmark](./benchmark/)
   - [Data Split](./benchmark/data-split.md)
+- [Download](./DOWNLOAD.md)
