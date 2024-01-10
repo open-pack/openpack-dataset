@@ -1,24 +1,63 @@
 # Data Stream: Metadata
 
-- [1. `system-order-sheet`](#1-system-order-sheet)
-  - [1.1. Relative Path](#11-relative-path)
+- [1. `item-list`](#1-item-list)
+  - [1.1. Data Location](#11-data-location)
   - [1.2. File Format (CSV)](#12-file-format-csv)
-  - [1.3. Sample Data](#13-sample-data)
+- [2. `subject-attribute`](#2-subject-attribute)
+  - [2.1. Data Location](#21-data-location)
+- [3. `system-order-sheet`](#3-system-order-sheet)
+  - [3.1. Relative Path](#31-relative-path)
+  - [3.2. File Format (CSV)](#32-file-format-csv)
+  - [3.3. Sample Data](#33-sample-data)
 
-## 1. `system-order-sheet`
+## 1. `item-list`
+
+- Data Stream ID: `D3101`
+- Config File: None
+- Sensor: None
+
+### 1.1. Data Location
+
+The data is available on this repo. See [data/items.csv](../../data/items.csv)
+
+### 1.2. File Format (CSV)
+
+| #   | Column Name   | Unit | Dtype | Note |
+| --- | ------------- | ---- | ----- | ---- |
+| 0   | item_id       | None | str   |      |
+| 1   | name          | None | str   |      |
+| 1   | JAN_code      | None | str   |      |
+| 1   | height\_\_cm  | cm   | int   |      |
+| 1   | width\_\_cm   | cm   | int   |      |
+| 1   | depth\_\_cm   | cm   | int   |      |
+| 1   | size_category | None | str   |      |
+| 1   | amount        | None | int   |      |
+| 1   | url           | None | str   |      |
+
+## 2. `subject-attribute`
+
+- Data Stream ID: `D3201`
+- Config File: None
+- Sensor: None (Information collected through surveys)
+
+### 2.1. Data Location
+
+This data is available on this repo. See [docs/SUBJECT.md](../SUBJECTS.md).
+
+## 3. `system-order-sheet`
 
 - Data Stream ID: `D3301`
-- Config File: [system-order-sheet.yaml](../configs/dataset/stream/system-order-sheet.yaml)
+- Config File: [system-order-sheet.yaml](https://github.com/open-pack/openpack-toolkit/tree/main/configs/dataset/stream/system-order-sheet.yaml)
 - Sensor
   - Data Type: system/order-sheet
 
-### 1.1. Relative Path
+### 3.1. Relative Path
 
 ```text
 ${path.openpack.rootdir}/${user.name}/system/order-sheet//${session}.csv
 ```
 
-### 1.2. File Format (CSV)
+### 3.2. File Format (CSV)
 
 | #   | Column Name  | Unit | Dtype | Note                                       |
 | --- | ------------ | ---- | ----- | ------------------------------------------ |
@@ -38,7 +77,7 @@ ${path.openpack.rootdir}/${user.name}/system/order-sheet//${session}.csv
 | 13  | amount4      | None | str   |                                            |
 | 14  | amount5      | None | str   |                                            |
 
-### 1.3. Sample Data
+### 3.3. Sample Data
 
 | sheet_no | session   | box   | pattern | total_amount | item1 | item2 | item3 | item4 | item5 | amount1 | amount2 | amount3 | amount4 | amount5 |     |
 | -------- | --------- | ----- | ------- | ------------ | ----- | ----- | ----- | ----- | ----- | ------- | ------- | ------- | ------- | ------- | --- |
