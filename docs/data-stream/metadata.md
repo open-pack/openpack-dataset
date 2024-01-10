@@ -14,7 +14,7 @@
 
 ### 1.1. Relative Path
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/system/order-sheet//${session}.csv
 ```
 

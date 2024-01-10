@@ -19,7 +19,7 @@
 
 ### 1.1. Relative Path
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/system/ht/${session}.csv
 ```
 
@@ -57,7 +57,7 @@ ${path.openpack.rootdir}/${user.name}/system/ht/${session}.csv
 
 ### 2.1. Relative Path
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/system/printer/${session}.csv
 ```
 

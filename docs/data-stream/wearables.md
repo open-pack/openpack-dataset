@@ -32,7 +32,7 @@
 
 ### 1.1. Relative Path
 
-- device: `atr01`, `atr02`, `atr03`, `atr04`
+- device: `atr01` for `D0101`, `atr02` for `D0201`, `atr03` for `D0301`, `atr04` for `D0401`
 
 ```text
 ${path.openpack.rootdir}/${user.name}/atr/${device}/${session}.csv
@@ -79,9 +79,9 @@ ${path.openpack.rootdir}/${user.name}/atr/${device}/${session}.csv
 
 ### 2.1. Relative Path
 
-- device: `e401`, `e402`
+- device: `e401` for `D0501`, `e402` for `D0601`
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/e4/${device}/acc/${session}.csv
 ```
 
@@ -119,9 +119,9 @@ ${path.openpack.rootdir}/${user.name}/e4/${device}/acc/${session}.csv
 
 ### 3.1. Relative Path
 
-- device: `e401`, `e402`
+- - device: `e401` for `D0502`, `e402` for `D0602`
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/e4/${device}/bvp/${session}.csv
 ```
 
@@ -157,9 +157,9 @@ ${path.openpack.rootdir}/${user.name}/e4/${device}/bvp/${session}.csv
 
 ### 4.1. Relative Path
 
-- device: `e401`, `e402`
+- device: `e401` for `D0503`, `e402` for `D0603`
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/e4/${device}/eda/${session}.csv
 ```
 
@@ -195,9 +195,9 @@ ${path.openpack.rootdir}/${user.name}/e4/${device}/eda/${session}.csv
 
 ### 5.1. Relative Path
 
-- device: `e401`, `e402`
+- device: `e401` for `D0504`, `e402` for `D0604`
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/e4/${device}/temp/${session}.csv
 ```
 

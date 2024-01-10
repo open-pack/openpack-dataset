@@ -30,7 +30,7 @@
 
 ### 1.1. Relative Path
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/kinect/2d-kpt/mmpose-hrnet-w48-posetrack18-384x288-posewarper-stage2/single/${session}.json
 ```
 
@@ -198,7 +198,7 @@ ${path.openpack.rootdir}/${user.name}/kinect/2d-kpt/mmpose-hrnet-w48-posetrack18
   - `none`: Original outputs from the k4abt
   - `single-ffill-flip-fixed`: Skeletons for the target subjects are extracted from `none`.
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/kinect/3d-kpt/k4abt/${preprocessing}/${session}.json
 ```
 
@@ -233,7 +233,7 @@ TBA
 
 ### 3.1. Relative Path
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/kinect/depth/frames/${session}
 ```
 
@@ -253,7 +253,7 @@ ${path.openpack.rootdir}/${user.name}/kinect/depth/frames/${session}
 
 ### 4.1. Relative Path
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/rs02/depth/frames/${session}
 ```
 
@@ -271,7 +271,7 @@ ${path.openpack.rootdir}/${user.name}/rs02/depth/frames/${session}
 
 ### 5.1. Relative Path
 
-```txt
+```text
 ${path.openpack.rootdir}/${user.name}/lidar/frames/${session}
 ```
 
