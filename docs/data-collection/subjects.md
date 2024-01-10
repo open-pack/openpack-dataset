@@ -1,7 +1,5 @@
 # Subjects
 
-## Subjects Meta Data
-
 We invited 16 distinct subjects for our data collection.
 The ages of the subjects are between 20s and 50s.
 Here is information for currently available users.
@@ -29,7 +27,3 @@ Here is information for currently available users.
 | U0208   | M   | 20s | Right         | None       |                      |
 | U0209   | M   | 20s | Right         | None       |                      |
 | U0210   | F   | 50s | Right         | 3 Month    | Same person as U0103 |
-
-## Links
-
-- [Recording Sessions](./SESSIONS.md)
