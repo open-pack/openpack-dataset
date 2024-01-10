@@ -166,7 +166,3 @@ It is recommended that this list be checked carefully and, if necessary, exclude
 | U0207   | S0200    | ALL                               | atr03,                          | ATR03 was attached in the wrong direction.                                                                        | `NO FIX AVAILABLE` |
 | U0209   | S0400    | ALL                               | atr03,                          | ATR03 was attached in the wrong direction.                                                                        | `NO FIX AVAILABLE` |
 | U0209   | S0500    | ALL                               | atr03,                          | ATR03 was attached in the wrong direction.                                                                        | `NO FIX AVAILABLE` |
-
-## Links
-
-- [Subjects Metadata](./SUBJECTS.md)

@@ -26,24 +26,21 @@ For more information, including dataset features and visual samples, please visi
 
 ## Documentation
 
-Technical information on this dataset is available under [docs/](./docs) folder.
+Technical information on this dataset is available under [docs](./docs/) folder.
 
-- [OpenPack Dataset - Documentation](./docs/README.md)
-
-  - Data Collection
-    - [Subjects](./docs/SUBJECTS.md)
-    - [Recording Sessions](./docs/SESSIONS.md)
+- [OpenPack Dataset - Documentation](./docs/)
+  - [Data Collection](./docs/data-collection/)
+    - [Subjects](./docs/data-collection/subjects.md)
+    - [Recording Sessions](./docs/data-collection/sessions.md)
   - [Data Stream (Sensor Data Types and File Format)](./docs/data-stream/)
-
     - [Wearable Sensors](./docsdata-stream/wearables.md)
     - [Vision Modalities](./docs/data-stream/vision.md)
     - [IoT Device](./docs/data-stream/iot.md)
     - [Metadata](./docs/data-stream/metadata.md)
-
-  - Annotation
-    - [Activity Class Definition](./docs/ANNOTATION.md)
-  - Benchmark
-    - [Data Split](./docs/DATA_SPLIT.md)
+  - [Annotation](./docs/annotation/)
+    - [Activity Class Definition](./docs/annotation/activity-class.md)
+  - [Benchmark](./docs/benchmark/)
+    - [Data Split](./docs/benchmark/data-split.md)
   - [How to download the OpenPack dataset?](./docs/DOWNLOAD.md)
 
 ## Download
