@@ -2,11 +2,14 @@
 
 ## Table of Contents
 
-- [Reocrding Sessions](./SESSIONS.md)
-- Data
-  - [Sensor Modality (Data Stream)](./DATA_STREAM.md)
-  - [Subjects-related Metadata](./SUBJECTS.md)
-  - [System Metadata](./METADATA.md)
+- Data Collection
+  - [Subjects](./SUBJECTS.md)
+  - [Recording Sessions](./SESSIONS.md)
+- [Data Stream (Sensor Data Types and File Format)](./data-stream/)
+  - [Wearable Sensors](./data-stream/wearables.md)
+  - [Vision Modalities](./data-stream/vision.md)
+  - [IoT Device](./data-stream/iot.md)
+  - [Metadata](./data-stream/metadata.md)
 - Annotation
   - [Activity Class Definition](./ANNOTATION.md)
 - Benchmark
