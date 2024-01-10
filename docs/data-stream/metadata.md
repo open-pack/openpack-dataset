@@ -12,6 +12,9 @@
 
 ## 1. `item-list`
 
+The information about products that are used in the experiment.
+This data includes the product name, product code (JAN code), and size.
+
 - Data Stream ID: `D3101`
 - Config File: None
 - Sensor: None
@@ -45,6 +48,8 @@ The data is available on this repo. See [data/items.csv](../../data/items.csv)
 This data is available on this repo. See [docs/SUBJECT.md](../SUBJECTS.md).
 
 ## 3. `system-order-sheet`
+
+This data includes item IDs to be shipped in each box.
 
 - Data Stream ID: `D3301`
 - Config File: [system-order-sheet.yaml](https://github.com/open-pack/openpack-toolkit/tree/main/configs/dataset/stream/system-order-sheet.yaml)
