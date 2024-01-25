@@ -108,7 +108,7 @@ Annotation Data (Operation Label) from ../../../../data/datasets/openpack/v1.0.0
 
 Combines the annotation label with the IMU data using UNIX timestamps.
 First, create a new column `operation` in `df_imu` to store operation labels.
-The default value should be the ID for the Null class (`8100`, Ref: [ANNOTATION.md](../ANNOTATION.md)).
+The default value should be the ID for the Null class (`8100`, Ref: [Activity Class Definitions](../annotation/activity-class.md)).
 Extract records obtained between the `unixtime_start` and `unixtime_end` of a label, and update the operation IDs of the records.
 
 ```python
