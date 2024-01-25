@@ -8,6 +8,7 @@
   - [Download from Zenodo](#download-from-zenodo)
   - [Donwload from Google Drive](#donwload-from-google-drive)
   - [Download from Google Drive (RGB)](#download-from-google-drive-rgb)
+- [How to check the downloaded files?](#how-to-check-the-downloaded-files)
 
 ## Data Repositories
 
@@ -80,3 +81,27 @@ The usage of this dataset is limited to academic research ONLY, any direct or in
 
 You must first apply through ["OpenPack Dataset - Access Request Form"](https://docs.google.com/forms/d/e/1FAIpQLScrRWe-qTQV5CKTBxtLQZ7ScgLsHFWxXRmD5he04qXRVBAtqg/viewform?usp=sf_link) and we will confirm your qualification.
 Once approved, we will share the data with Read Only access to your Google account.
+
+## How to check the downloaded files?
+
+A file index of the OpenPack dataset is available in [release/v1.0.0/)](../release/v1.0.0/).
+By comparing this file index with your dataset folder, you can confirm that all data is correctly downloaded and placed in the correct place.
+In [openpack-toolkit](https://github.com/open-pack/openpack-toolkit), there is a tool to automatically check the downloaded files with the file index on the GitHub.
+Use this command to check your dataset directory. (Requirements: `Python>=3.9`)
+
+```bash
+#!/bin/bash
+pip install openpack-toolkit
+optk-file check -r ./data/datasets/openpack/
+```
+
+If there are any missing files, a list of them are shown in your terminal.
+Also, the scan results are saved in `file_index_OpenPack_v1.0.0_zenodo.csv`, and if a file exists, True is marked in the `file_exists` column. Here is an example of the output.
+
+| path                                            | size      | is_dir | file_exists |
+| ----------------------------------------------- | --------- | ------ | ----------- |
+| U0101/annotation/openpack-actions-1hz/S0100.csv | 382.24 KB | False  | True        |
+| U0101/annotation/openpack-actions-1hz/S0200.csv | 312.42 KB | False  | True        |
+| U0101/annotation/openpack-actions-1hz/S0300.csv | 312.67 KB | False  | True        |
+| U0101/annotation/openpack-actions-1hz/S0400.csv | 333.41 KB | False  | True        |
+| U0101/annotation/openpack-actions-1hz/S0500.csv | 298.35 KB | False  | True        |
