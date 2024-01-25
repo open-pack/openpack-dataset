@@ -3,6 +3,8 @@
 [OpenPack Dataset](https://open-pack.github.io/) is a new large-scale multi-modal dataset of packing processes.
 This repository provides download instructions and technical details for the OpenPack Dataset.
 
+![OpenPack Dataset Log](./assets/dataset/OpenPackDataset-black.png)
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
