@@ -9,6 +9,7 @@
   - [Donwload from Google Drive](#donwload-from-google-drive)
   - [Download from Google Drive (RGB)](#download-from-google-drive-rgb)
 - [How to check the downloaded files?](#how-to-check-the-downloaded-files)
+- [File Structure](#file-structure)
 
 ## Data Repositories
 
@@ -105,3 +106,46 @@ Also, the scan results are saved in `file_index_OpenPack_v1.0.0_zenodo.csv`, and
 | U0101/annotation/openpack-actions-1hz/S0300.csv | 312.67 KB | False  | True        |
 | U0101/annotation/openpack-actions-1hz/S0400.csv | 333.41 KB | False  | True        |
 | U0101/annotation/openpack-actions-1hz/S0500.csv | 298.35 KB | False  | True        |
+
+## File Structure
+
+Data are stored in separate files for each modality and each session.
+This is because the OpenPack is a multimodal dataset and each sensor has different sampling rate.
+
+The basic path structure is as follows.
+In each folder corresponding to a subject (e.g., U0101), there are subfolders for each sensor (e.g., annotation, atr).
+In the lower level, you can find subfolders for the sensor modalities.
+Sensor data for each session is stored in the subfolder in text format (e.g., CSV, JSON).
+Therefore, data files must be concatenated when they are used. How to combine data in the separate files is explained in [tutorials](./tutorials/load-imu-with-operation-labels.md).
+
+```text
+${path.openpack.rootdir}/${user}/${sensor}[/${device}][/${method}]/${session}
+```
+
+Here is a sample of the standard file structure of the OpenPack dataset.
+
+```text
+openpack/
+└── v1.0.0
+    ├── U0101
+    │   ├── annotation
+    │   │   ├── openpack-actions
+    │   │   │   ├── S0100.csv
+    │   │   │   ├── S0200.csv
+    │   │   │   ├── S0300.csv
+    │   │   │   ├── S0400.csv
+    │   │   │   └── S0500.csv
+    │   │   ├── openpack-operations
+    │   │   ├── openpack-outliers
+    │   │   └── ...
+    │   ├── atr
+    │   │   ├── atr01
+    │   │   │   ├── S0100.csv
+    │   │   │   └── ...
+    │   │   ├── atr02
+    │   │   ├── atr03
+    │   │   └── atr04
+    │   ├── ...
+    ├── U0102
+    ├── ...
+```
