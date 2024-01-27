@@ -8,6 +8,8 @@
   - [Download from Zenodo](#download-from-zenodo)
   - [Donwload from Google Drive](#donwload-from-google-drive)
   - [Download from Google Drive (RGB)](#download-from-google-drive-rgb)
+- [How to check the downloaded files?](#how-to-check-the-downloaded-files)
+- [File Structure](#file-structure)
 
 ## Data Repositories
 
@@ -80,3 +82,70 @@ The usage of this dataset is limited to academic research ONLY, any direct or in
 
 You must first apply through ["OpenPack Dataset - Access Request Form"](https://docs.google.com/forms/d/e/1FAIpQLScrRWe-qTQV5CKTBxtLQZ7ScgLsHFWxXRmD5he04qXRVBAtqg/viewform?usp=sf_link) and we will confirm your qualification.
 Once approved, we will share the data with Read Only access to your Google account.
+
+## How to check the downloaded files?
+
+A file index of the OpenPack dataset is available in [release/v1.0.0/)](../release/v1.0.0/).
+By comparing this file index with your dataset folder, you can confirm that all data is correctly downloaded and placed in the correct place.
+In [openpack-toolkit](https://github.com/open-pack/openpack-toolkit), there is a tool to automatically check the downloaded files with the file index on the GitHub.
+Use this command to check your dataset directory. (Requirements: `Python>=3.9`)
+
+```bash
+#!/bin/bash
+pip install openpack-toolkit
+optk-file check -r ./data/datasets/openpack/
+```
+
+If there are any missing files, a list of them are shown in your terminal.
+Also, the scan results are saved in `file_index_OpenPack_v1.0.0_zenodo.csv`, and if a file exists, True is marked in the `file_exists` column. Here is an example of the output.
+
+| path                                            | size      | is_dir | file_exists |
+| ----------------------------------------------- | --------- | ------ | ----------- |
+| U0101/annotation/openpack-actions-1hz/S0100.csv | 382.24 KB | False  | True        |
+| U0101/annotation/openpack-actions-1hz/S0200.csv | 312.42 KB | False  | True        |
+| U0101/annotation/openpack-actions-1hz/S0300.csv | 312.67 KB | False  | True        |
+| U0101/annotation/openpack-actions-1hz/S0400.csv | 333.41 KB | False  | True        |
+| U0101/annotation/openpack-actions-1hz/S0500.csv | 298.35 KB | False  | True        |
+
+## File Structure
+
+Data are stored in separate files for each modality and each session.
+This is because the OpenPack is a multimodal dataset and each sensor has different sampling rate.
+
+The basic path structure is as follows.
+In each folder corresponding to a subject (e.g., U0101), there are subfolders for each sensor (e.g., annotation, atr).
+In the lower level, you can find subfolders for the sensor modalities.
+Sensor data for each session is stored in the subfolder in text format (e.g., CSV, JSON).
+Therefore, data files must be concatenated when they are used. How to combine data in the separate files is explained in [tutorials](./tutorials/load-imu-with-operation-labels.md).
+
+```text
+${path.openpack.rootdir}/${user}/${sensor}[/${device}][/${method}]/${session}
+```
+
+Here is a sample of the standard file structure of the OpenPack dataset.
+
+```text
+openpack/
+└── v1.0.0
+    ├── U0101
+    │   ├── annotation
+    │   │   ├── openpack-actions
+    │   │   │   ├── S0100.csv
+    │   │   │   ├── S0200.csv
+    │   │   │   ├── S0300.csv
+    │   │   │   ├── S0400.csv
+    │   │   │   └── S0500.csv
+    │   │   ├── openpack-operations
+    │   │   ├── openpack-outliers
+    │   │   └── ...
+    │   ├── atr
+    │   │   ├── atr01
+    │   │   │   ├── S0100.csv
+    │   │   │   └── ...
+    │   │   ├── atr02
+    │   │   ├── atr03
+    │   │   └── atr04
+    │   ├── ...
+    ├── U0102
+    ├── ...
+```

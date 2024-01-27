@@ -18,12 +18,13 @@ core.workflow(
         update_description=True,
         integrates = [],
     ),
-    origin_files = glob(["docs/**"]),
-    destination_files = glob(["docs/openpack-dataset/**"]),
+    origin_files = glob(["docs/**", "data/openpack/**"]),
+    destination_files = glob(["docs/openpack-dataset/**", "sample/openpack/**"]),
     authoring = authoring.pass_thru("Copybara <yoshimura708x@gmail.com>"),
 
     # Change the path here to the folder you want to publish publicly
     transformations = [
 	    core.move("docs/", "docs/openpack-dataset/"),
+	    core.move("data/openpack/", "sample/openpack/"),
 	],
 )
