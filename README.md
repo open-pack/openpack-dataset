@@ -76,19 +76,19 @@ $ bash download_from_zenodo.sh $DATASET_ROOTDIR_PATH
 
 ### Preprocessed Dataset
 
-Sensors used in the OpenPack dataset have different sampling rate.
-Therefore, each sensor is stored in a separate file. When you use them, you have to combine them using timestamps assosiated with each record. But it's not easy for the new commer.
+Sensors used in the OpenPack dataset have different sampling rates.
+Therefore, each sensor is stored in a separate file. When you use them, you have to combine them using timestamps assosiated with each record. But we understand that it's not easy for the new commer.
 
-Therefore, we prepared pre-processed data for the quick trial.
+Therefore, we prepared pre-processed dataset for the quick trial.
 IMU data from 4 sensors and work operation labels are combined into one CSV file.
-This preprocessd dataset is available on [zenodo - preprocessed-IMU-with-operation-labels.zip](https://zenodo.org/records/8145223).
+This preprocessd dataset is available on [zenodo (preprocessed-IMU-with-operation-labels.zip)](https://zenodo.org/records/8145223).
 
 For more details, see [data-stream/preprocessed](./docs/data-stream/preprocessed.md).
 
 ### Sample Dataset
 
 Sample data including RGB images is available in [./data/openpack/](./data/openpack/).
-You can used these files to check content and file format before downloading the full dataset.
+You can used these files to check contents and file formats before downloading the full dataset.
 
 ## Tools & Ecosystem
 
