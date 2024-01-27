@@ -14,17 +14,17 @@ core.workflow(
         url = openpackToolkitUrl,
         destination_ref = "main",
         pr_branch = "feat/copybara/from-openpack-dataset",
-        title="[feat][CopyBara] Changes from openpack-dataset (${CONTEXT_REFERENCE})",
+        title="[feat][CopyBara] Changes from openpack-dataset",
         update_description=True,
         integrates = [],
     ),
     origin_files = glob(["docs/**", "data/openpack/**"]),
-    destination_files = glob(["docs/openpack-dataset/**", "sample/openpack/**"]),
+    destination_files = glob(["docs/openpack-dataset/**", "samples/openpack/**"]),
     authoring = authoring.pass_thru("Copybara <yoshimura708x@gmail.com>"),
 
     # Change the path here to the folder you want to publish publicly
     transformations = [
 	    core.move("docs/", "docs/openpack-dataset/"),
-	    core.move("data/openpack/", "sample/openpack/"),
+	    core.move("data/openpack/", "samples/openpack/"),
 	],
 )
