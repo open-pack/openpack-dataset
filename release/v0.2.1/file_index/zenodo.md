@@ -1,4 +1,4 @@
-# OpenPack Dataset (v0.3.0) - Zenodo
+# OpenPack Dataset (v0.2.1) - Zenodo
 
 ## File Index
 
