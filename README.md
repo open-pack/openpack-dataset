@@ -5,20 +5,6 @@ This repository provides download instructions and technical details for the Ope
 
 ![OpenPack Dataset Log](./assets/dataset/OpenPackDataset-black.png)
 
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [What is OpenPack dataset?](#what-is-openpack-dataset)
-- [Documentation](#documentation)
-- [Download](#download)
-  - [Full Dataset](#full-dataset)
-  - [Preprocessed Dataset](#preprocessed-dataset)
-  - [Sample Dataset](#sample-dataset)
-- [Tools \& Ecosystem](#tools--ecosystem)
-- [Contact](#contact)
-- [Acknowledgment](#acknowledgment)
-- [License](#license)
-
 ## What is OpenPack dataset?
 
 OpenPack is an open access logistics-dataset for human activity recognition, which contains 53 hours of human movement data with 20,129 instances of work operation annotation.
