@@ -71,7 +71,7 @@ This preprocessd dataset is available on [zenodo (preprocessed-IMU-with-operatio
 
 For more details, see [data-stream/preprocessed](./docs/data-stream/preprocessed.md).
 
-### Sample Dataset
+### Sample Data
 
 Sample data including RGB images is available in [./data/openpack/](./data/openpack/).
 You can used these files to check contents and file formats before downloading the full dataset.
