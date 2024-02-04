@@ -5,20 +5,6 @@ This repository provides download instructions and technical details for the Ope
 
 ![OpenPack Dataset Log](./assets/dataset/OpenPackDataset-black.png)
 
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [What is OpenPack dataset?](#what-is-openpack-dataset)
-- [Documentation](#documentation)
-- [Download](#download)
-  - [Full Dataset](#full-dataset)
-  - [Preprocessed Dataset](#preprocessed-dataset)
-  - [Sample Dataset](#sample-dataset)
-- [Tools \& Ecosystem](#tools--ecosystem)
-- [Contact](#contact)
-- [Acknowledgment](#acknowledgment)
-- [License](#license)
-
 ## What is OpenPack dataset?
 
 OpenPack is an open access logistics-dataset for human activity recognition, which contains 53 hours of human movement data with 20,129 instances of work operation annotation.
@@ -46,7 +32,7 @@ Technical information on this dataset is available under [docs](./docs/) folder.
     - [Activity Class Definition](./docs/annotation/activity-class.md)
   - [Benchmark](./docs/benchmark/)
     - [Data Split](./docs/benchmark/data-split.md)
-  - [How to download the OpenPack dataset?](./docs/DOWNLOAD.md)
+  - [Download](./docs/DOWNLOAD.md)
   - [Tutorial](./docs/tutorials/)
     - [Load IMU Sensor Data with Operation Labels](./docs/tutorials/load-imu-with-operation-labels.md)
 
@@ -85,7 +71,7 @@ This preprocessd dataset is available on [zenodo (preprocessed-IMU-with-operatio
 
 For more details, see [data-stream/preprocessed](./docs/data-stream/preprocessed.md).
 
-### Sample Dataset
+### Sample Data
 
 Sample data including RGB images is available in [./data/openpack/](./data/openpack/).
 You can used these files to check contents and file formats before downloading the full dataset.
@@ -109,6 +95,7 @@ Below are links to the available tools.
   - Tutorial notebooks for U-Net and DeepConvLSTM are available.
 - [YouTube: OpenPack Dataset](https://youtube.com/@openpackdataset6864?si=2VemMXqnXexe_f-4)
   - Samples of depth recordings and a tutorial session for OpenPack Challenge 2022 are available.
+  - The video of the tutorial session is Japanese, but the English subtitle is available.
 
 ## Contact
 

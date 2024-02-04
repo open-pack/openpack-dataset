@@ -1,8 +1,7 @@
 # Subjects
 
 We invited 16 distinct subjects for our data collection.
-The ages of the subjects are between 20s and 50s.
-Here is information for currently available users.
+Here is metadata about subjects.
 
 | Subject | Sex | Age | Dominant Hand | Experience | Note                 |
 | ------- | --- | --- | ------------- | ---------- | -------------------- |
@@ -27,3 +26,9 @@ Here is information for currently available users.
 | U0208   | M   | 20s | Right         | None       |                      |
 | U0209   | M   | 20s | Right         | None       |                      |
 | U0210   | F   | 50s | Right         | 3 Month    | Same person as U0103 |
+
+Subjects with IDs starting with `U01` have data for only Scenario 1, while subjects with IDs starting with `U02` have data for Scenarios 2-4.
+Data for Secenario 2-4 was collected more than 2 month after the data collection for Scenario 1.
+Five subjects participated in both data collections, but were assigned different IDs because there was a long time interval to forgot or improve their skills.
+Therefore, there are 21 subjects but the number of distinct subject is 16.
+See table above for the information on the overlapping subjects.

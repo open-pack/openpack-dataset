@@ -2,14 +2,16 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Data Repositories](#data-repositories)
-- [How to download the latest OpenPack dataset?](#how-to-download-the-latest-openpack-dataset)
-  - [Download from Zenodo](#download-from-zenodo)
-  - [Donwload from Google Drive](#donwload-from-google-drive)
-  - [Download from Google Drive (RGB)](#download-from-google-drive-rgb)
-- [How to check the downloaded files?](#how-to-check-the-downloaded-files)
-- [File Structure](#file-structure)
+- [Download](#download)
+  - [Table of Contents](#table-of-contents)
+  - [Data Repositories](#data-repositories)
+  - [How to download the latest OpenPack dataset?](#how-to-download-the-latest-openpack-dataset)
+    - [Sample Data on GitHub](#sample-data-on-github)
+    - [Download from Zenodo](#download-from-zenodo)
+    - [Donwload from Google Drive](#donwload-from-google-drive)
+    - [Download from Google Drive (RGB)](#download-from-google-drive-rgb)
+  - [How to check the downloaded files?](#how-to-check-the-downloaded-files)
+  - [File Structure](#file-structure)
 
 ## Data Repositories
 
@@ -44,6 +46,10 @@ Instructions for downloading each dataset come after this table.
 ## How to download the latest OpenPack dataset?
 
 Here we explain how to download the latest OpenPack dataset (v1.0.0).
+
+### Sample Data on GitHub
+
+Sample data for U0209 (Session 5) is available [here](../data/openpack/).
 
 ### Download from Zenodo
 
