@@ -95,6 +95,7 @@ Below are links to the available tools.
   - Tutorial notebooks for U-Net and DeepConvLSTM are available.
 - [YouTube: OpenPack Dataset](https://youtube.com/@openpackdataset6864?si=2VemMXqnXexe_f-4)
   - Samples of depth recordings and a tutorial session for OpenPack Challenge 2022 are available.
+  - The video of the tutorial session is Japanese, but the English subtitle is available.
 
 ## Contact
 
