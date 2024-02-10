@@ -4,7 +4,8 @@
 
 - [Data Collection](./data-collection/)
   - [Subjects](./data-collection/subjects.md)
-  - [Recording Scenario abd Session List](./data-collection/sessions.md)
+  - [Recording Scenario and Session List](./data-collection/sessions.md)
+  - [Recording Environment & Sensor Coordinates](./data-collection/environment.md)
 - [Data Stream (Sensor Data Types and File Format)](./data-stream/)
   - [Wearable Sensors](./data-stream/wearables.md)
   - [Vision Modalities](./data-stream/vision.md)

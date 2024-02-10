@@ -20,12 +20,12 @@ In this scenario, irregular situations/actions were added to Scenario 2. (i) Som
 
 ### Scenario.4 (S4)
 
-To simulate a busy working time, we rushed the subjects by introducing an auditory alarm in Scenario 3. We measured the average duration of a work period performed by a subject in prior sessions, and we started periodic alarms (30-45 s interval) when the elapsed time of a period exceeded about 80\% of the average duration.
+To simulate a busy working time, we rushed the subjects by introducing an auditory alarm in Scenario 3. We measured the average duration of a work period performed by a subject in prior sessions, and we started periodic alarms (30-45 s intervals) when the elapsed time of a period exceeded about 80\% of the average duration.
 
 ## Recording Sessions
 
 This is a list of recorded sessions.
-Each subjects peformed up to 5 sessions and each session has ID like `S0100`.
+Each subject performed up to 5 sessions and each session has a ID like `S0100`.
 The pair of user ID and session ID can be used to identify the unique data segments.
 The segment between `Start` and `End` specifies the start and end points of the annotation.
 
