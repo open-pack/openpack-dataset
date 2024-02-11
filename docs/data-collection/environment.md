@@ -14,6 +14,7 @@ The following figure shows the sensor placement and default locations of equipme
 ### Wearables
 
 The next figure shows the sensor placement in the data collection and sensor coordinate system.
+The IMU was mounted so that the y-axis pointed to the fingertip and the z-axis was oriented vertically and inward toward the arm.
 
 ![imu sensor placement](./assets/imu_coordinate.png)
 
