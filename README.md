@@ -23,8 +23,9 @@ Technical information on this dataset is available under [docs](./docs/) folder.
   - [Data Collection](./docs/data-collection/)
     - [Subjects](./docs/data-collection/subjects.md)
     - [Recording Sessions](./docs/data-collection/sessions.md)
+    - [Recording Environment & Sensor Coordinates](./docs/data-collection/environment.md)
   - [Data Stream (Sensor Data Types and File Format)](./docs/data-stream/)
-    - [Wearable Sensors](./docsdata-stream/wearables.md)
+    - [Wearable Sensors](./docs/data-stream/wearables.md)
     - [Vision Modalities](./docs/data-stream/vision.md)
     - [IoT Device](./docs/data-stream/iot.md)
     - [Metadata](./docs/data-stream/metadata.md)
@@ -63,18 +64,18 @@ $ bash download_from_zenodo.sh $DATASET_ROOTDIR_PATH
 ### Preprocessed Dataset
 
 Sensors used in the OpenPack dataset have different sampling rates.
-Therefore, each sensor is stored in a separate file. When you use them, you have to combine them using timestamps assosiated with each record. But we understand that it's not easy for the new commer.
+Therefore, each sensor is stored in a separate file. When you use them, you have to combine them using timestamps associated with each record. But we understand that it's not easy for the new comer.
 
-Therefore, we prepared pre-processed dataset for the quick trial.
+Therefore, we prepared a pre-processed dataset for the quick trial.
 IMU data from 4 sensors and work operation labels are combined into one CSV file.
-This preprocessd dataset is available on [zenodo (preprocessed-IMU-with-operation-labels.zip)](https://zenodo.org/records/8145223).
+This pre-processd dataset is available on [zenodo (preprocessed-IMU-with-operation-labels.zip)](https://zenodo.org/records/8145223).
 
 For more details, see [data-stream/preprocessed](./docs/data-stream/preprocessed.md).
 
 ### Sample Data
 
 Sample data including RGB images is available in [./data/openpack/](./data/openpack/).
-You can used these files to check contents and file formats before downloading the full dataset.
+You can use these files to check contents and file formats before downloading the full dataset.
 
 ## Tools & Ecosystem
 
@@ -95,7 +96,7 @@ Below are links to the available tools.
   - Tutorial notebooks for U-Net and DeepConvLSTM are available.
 - [YouTube: OpenPack Dataset](https://youtube.com/@openpackdataset6864?si=2VemMXqnXexe_f-4)
   - Samples of depth recordings and a tutorial session for OpenPack Challenge 2022 are available.
-  - The video of the tutorial session is Japanese, but the English subtitle is available.
+  - The video of the tutorial session is Japanese, but the English subtitles are available.
 
 ## Contact
 

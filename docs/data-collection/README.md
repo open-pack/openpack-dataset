@@ -3,5 +3,5 @@
 ## Table of Contents
 
 - [Subjects](./subjects.md)
-- [Recording Scenario abd Session List](./sessions.md)
-- Recording Environment (TODO)
+- [Recording Scenario and Session List](./sessions.md)
+- [Recording Environment & Sensor Coordinates](./environment.md)

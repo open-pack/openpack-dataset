@@ -45,7 +45,7 @@ The data is available on this repo. See [data/items.csv](../../data/items.csv)
 
 ### 2.1. Data Location
 
-This data is available on this repo. See [docs/SUBJECT.md](../SUBJECTS.md).
+This data is available on this repo. See [this page](../data-collection/subjects.md).
 
 ## 3. `system-order-sheet`
 
