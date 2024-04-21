@@ -1,5 +1,10 @@
 # OpenPack Dataset
 
+[![Static Badge](<https://img.shields.io/badge/Paper-IEEE_(PerCom2024)-blue?style=flat>)](https://ieeexplore.ieee.org/abstract/document/10494448)
+[![Static Badge](https://img.shields.io/badge/Paper-arXiv:3A3A2212.11152-red?style=flat)](https://arxiv.org/abs/2212.11152)
+[![Static Badge](https://img.shields.io/badge/Project-OpenPack_Dataset_Web-lightbrown?style=flat&labelColor=716140&color=eaddcf)](https://open-pack.github.io/)
+[![Static Badge](https://img.shields.io/badge/Latest_Release-v1.0.0-lightbrown?style=flat)](https://github.com/open-pack/openpack-dataset/tree/main/release/v1.0.0)
+
 [OpenPack Dataset](https://open-pack.github.io/) is a new large-scale multi-modal dataset of packing processes.
 This repository provides download instructions and technical details for the OpenPack Dataset.
 
@@ -14,6 +19,28 @@ This repo focuses on technical documentation.
 For more information, including dataset features and visual samples, please visit [OpenPack Dataset Official Web](https://open-pack.github.io/).
 
 ![OpenPack__KeyVisual](./assets/dataset/OpenPack__KeyVisual.png)
+
+### Latest Release
+
+[Release Note - OpenPack (v1.0.0)](./release/v1.0.0/)
+
+### Citation
+
+When using the dataset, kindly reference:
+
+> N. Yoshimura, J. Morales, T. Maekawa and T. Hara, "[OpenPack: A Large-Scale Dataset for Recognizing Packaging Works in IoT-Enabled Logistic Environments](https://ieeexplore.ieee.org/abstract/document/10494448)," 2024 IEEE International Conference on Pervasive Computing and Communications (PerCom), Biarritz, France, 2024
+
+```text
+@INPROCEEDINGS{10494448,
+  author={Yoshimura, Naoya and Morales, Jaime and Maekawa, Takuya and Hara, Takahiro},
+  booktitle={2024 IEEE International Conference on Pervasive Computing and Communications (PerCom)},
+  title={OpenPack: A Large-Scale Dataset for Recognizing Packaging Works in IoT-Enabled Logistic Environments},
+  year={2024},
+  volume={},
+  number={},
+  pages={90-97},
+  doi={10.1109/PerCom59722.2024.10494448}}
+```
 
 ## Documentation
 
@@ -64,7 +91,7 @@ $ bash download_from_zenodo.sh $DATASET_ROOTDIR_PATH
 ### Preprocessed Dataset
 
 Sensors used in the OpenPack dataset have different sampling rates.
-Therefore, each sensor is stored in a separate file. When you use them, you have to combine them using timestamps associated with each record. But we understand that it's not easy for the new comer.
+Therefore, each sensor is stored in a separate file. When you use them, you have to combine them using timestamps associated with each record. But we understand that it's not easy for the newcomer.
 
 Therefore, we prepared a pre-processed dataset for the quick trial.
 IMU data from 4 sensors and work operation labels are combined into one CSV file.
@@ -97,6 +124,16 @@ Below are links to the available tools.
 - [YouTube: OpenPack Dataset](https://youtube.com/@openpackdataset6864?si=2VemMXqnXexe_f-4)
   - Samples of depth recordings and a tutorial session for OpenPack Challenge 2022 are available.
   - The video of the tutorial session is Japanese, but the English subtitles are available.
+
+## Papers
+
+### Dataset (Citation)
+
+- N. Yoshimura, J. Morales, T. Maekawa and T. Hara, "OpenPack: A Large-Scale Dataset for Recognizing Packaging Works in IoT-Enabled Logistic Environments," 2024 IEEE International Conference on Pervasive Computing and Communications (PerCom), Biarritz, France, 2024 ([link](https://ieeexplore.ieee.org/abstract/document/10494448))
+
+### Related Research
+
+- Q. Xia, T. Maekawa, J. Morales, T. Hara, H. Oshima, M. Fukuda, Y. Namioka, "Preliminary investigation of SSL for Complex Work Activity Recognition in Industrial Domain via MoIL", 2024 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops), Biarritz, France, 2024 (Best WIP Award)
 
 ## Contact
 
